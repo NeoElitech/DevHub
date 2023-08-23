@@ -4,7 +4,7 @@ param(
 
     [Parameter]
     [string]$Target = "Rebuild",
-    
+
     [Parameter]
     [string]$Configuration = "Release"
 )
