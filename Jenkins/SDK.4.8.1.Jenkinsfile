@@ -10,10 +10,10 @@ node {
             checkout scm
         }
         stage("Build") {
-            powershell "docker build --tag sdk.4.8.1:${params.Tag} --file ./Docker/SDK.4.8.1.Dockerfile ."
+            powershell script: "docker build --tag sdk.4.8.1:${params.Tag} --file ./Docker/SDK.4.8.1.Dockerfile ."
         }
         stage("Prune") {
-            powershell "docker images prune"
+            powershell script: "docker images prune"
         }
     }
     finally {
