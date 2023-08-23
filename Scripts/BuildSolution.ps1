@@ -3,4 +3,4 @@ param(
     [string]$SolutionPath
 )
 
-dotnet msbuild $SolutionPath -t:restore;rebuild
+dotnet msbuild $SolutionPath -t:restore
