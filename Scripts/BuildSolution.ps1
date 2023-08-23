@@ -3,4 +3,4 @@ param(
     [string]$SolutionPath
 )
 
-dotnet msbuild $SolutionPath
+dotnet msbuild $SolutionPath -t:Rebuild -p:Configuration=Release
