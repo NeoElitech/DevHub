@@ -8,6 +8,6 @@ node {
         }
     }
     finally {
-        cleanWs()
+        
     }
 }
