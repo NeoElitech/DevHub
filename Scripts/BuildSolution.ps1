@@ -1,6 +1,17 @@
 param(
     [Parameter(Mandatory)]
-    [string]$SolutionPath
+    [String]
+    $SolutionPath,
+
+    [Parameter]
+    [String]
+    $Target = "Rebuild",
+
+    [Parameter]
+    [String]
+    $Configuration = "Release"
+
+    
 )
 
-dotnet msbuild -h
+dotnet msbuild $SolutionPath -t:$Target -p:Configuration=$Configuration
