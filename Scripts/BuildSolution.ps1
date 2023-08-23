@@ -1,7 +1,11 @@
 param(
     [Parameter(Mandatory)]
-    $SolutionPath,
+    [string]$SolutionPath,
+
+    [Parameter]
     [string]$Target = "Rebuild",
+    
+    [Parameter]
     [string]$Configuration = "Release"
 )
 
