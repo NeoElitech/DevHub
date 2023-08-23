@@ -4,4 +4,4 @@ param(
 )
 
 nuget.exe restore $SolutionPath
-dotnet msbuild $SolutionPath t:Rebuild t:Configuration=Release
+dotnet msbuild $SolutionPath -t:Rebuild -p:Configuration=Release
