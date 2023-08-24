@@ -1,6 +1,7 @@
 param(
     [Parameter(Mandatory)]
-    [string]$SolutionPath
+    [string]$SolutionPath,
+    [string]$Configuration = "Release"
 )
 
 nuget restore $SolutionPath
