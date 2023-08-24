@@ -7,5 +7,3 @@ RUN SETX /M PATH "%PATH%;%Scripts%"
 
 # Copy Resources
 COPY Scripts $Scripts
-
-ENTRYPOINT [ "CMD" ]
