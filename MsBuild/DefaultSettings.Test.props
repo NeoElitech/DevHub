@@ -1,0 +1,6 @@
+<Project>
+    <Import Project="DefaultSettings.Base.props" />
+    <PropertyGroup>
+        <OutputPath>$(BaseOutputPath)\test</OutputPath>
+    </PropertyGroup>
+</Project>

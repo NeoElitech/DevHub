@@ -1,0 +1,11 @@
+<Project>
+    <PropertyGroup>
+        <AssemblySearchPaths>
+            $(BinPath);
+            $(AssemblySearchPaths);
+        </AssemblySearchPaths>
+    </PropertyGroup>
+    <Target Name="A" InitialTargets="Build">
+        <Message Text="Starting build for project" Importance="high" />
+    </Target>
+</Project>

@@ -1,0 +1,6 @@
+<Project>
+    <Import Project="DefaultSettings.Base.props" />
+    <PropertyGroup>
+        <OutputPath>$(AppBasePath)\$(AssemblyName)</OutputPath>
+    </PropertyGroup>
+</Project>

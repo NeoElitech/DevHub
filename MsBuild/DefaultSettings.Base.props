@@ -1,0 +1,43 @@
+<Project>
+
+    <PropertyGroup>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <LangVersion>8</LangVersion>
+        <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+        <GenerateBindingRedirectsOutputType>false</GenerateBindingRedirectsOutputType>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <WarningLevel>4</WarningLevel>
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <Prefer32Bit>false</Prefer32Bit>
+        <DebugSymbols>true</DebugSymbols>
+        <ErrorReport>prompt</ErrorReport>
+        <Branch>$([System.IO.File]::ReadAlltext('$(SolutionDir).git\HEAD').Replace('ref: refs/heads/', '').Trim())</Branch>
+        <BaseOutputPath Condition=" '$(BaseOutputPath)' == '' ">$(SolutionDir)..\Mach5\$(Branch)</BaseOutputPath>
+        <AppBasePath>$(BaseOutputPath)\app</AppBasePath>
+        <BinPath>$(AppBasePath)\bin</BinPath>
+        <BaseIntermediateOutputPath>$(BaseOutputPath)\obj\$(AssemblyName)</BaseIntermediateOutputPath>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DefineConstants>TRACE;DEBUG;DESIGN</DefineConstants>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DefineConstants>BUILD</DefineConstants>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Update="*">
+            <Private>False</Private>
+        </Reference>
+        <ProjectReference Update="*">
+            <Private>False</Private>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+<Project>
+    <Import Project="DefaultSettings.Base.props" />
+    <PropertyGroup>
+        <OutputPath>$(BinPath)</OutputPath>
+        <DocumentationFile>$(BinPath)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+</Project>
